@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <Button
+        android:id="@+id/scan"
+        style="@android:style/Widget.Button"
+        android:layout_width="380dp"
+
+        android:layout_height="65dp"
+        android:layout_marginTop="55dp"
+        android:autoText="false"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:fontFamily="sans-serif-thin"
+        android:text="Scan License Plate"
+        android:textAlignment="center"
+        android:textSize="25sp"
+
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/viewblacklist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/viewblacklist"
+        style="@android:style/Widget.Button"
+        android:layout_width="375dp"
+        android:layout_height="57dp"
+        android:autoText="false"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:fontFamily="sans-serif-thin"
+        android:text="View Blacklisted Cars"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/viewwhitelist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scan" />
+
+    <Button
+        android:id="@+id/viewwhitelist"
+        android:layout_width="373dp"
+        android:layout_height="58dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:fontFamily="sans-serif-thin"
+        android:text="View Whitelisted Cars"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addmanually"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewblacklist" />
+
+    <Button
+        android:id="@+id/addmanually"
+        android:layout_width="373dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:fontFamily="sans-serif-thin"
+        android:text="Add Car Manually"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewwhitelist" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OCR</string>
+    <string name="title_activity_camera_capture">CameraCapture</string>
+    <string name="title_activity_whitelist">whitelist</string>
+</resources>

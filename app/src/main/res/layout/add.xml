@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add">
+
+    <EditText
+        android:id="@+id/License"
+        style="@android:style/Widget.Button"
+        android:layout_width="375dp"
+        android:layout_height="58dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:hint="License Plate No:"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Model"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter" />
+
+    <EditText
+        android:id="@+id/Model"
+        style="@android:style/Widget.Button"
+        android:layout_width="375dp"
+        android:layout_height="56dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:hint="Model:"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/License" />
+
+    <EditText
+        android:id="@+id/Color"
+        style="@android:style/Widget.Button"
+        android:layout_width="375dp"
+        android:layout_height="63dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:hint="Color:"
+        android:inputType="textPersonName"
+
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Model" />
+
+    <TextView
+        android:id="@+id/enter"
+        android:layout_width="369dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Enter details of the car:"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorAccent"
+        android:textSize="35sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@id/License"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="328dp"
+        android:layout_height="73dp"
+        android:background="@drawable/button_blacklist"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:text="Add To List" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="390dp"
+        android:layout_height="197dp"
+        app:layout_constraintBottom_toTopOf="@+id/ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Color">
+
+        <RadioButton
+            android:id="@+id/whitelist"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:text="Whitelist"
+            android:textAlignment="textStart"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/blacklist"
+            style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_weight="1"
+            android:text="Blacklist"
+            android:textSize="30sp" />
+
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>
